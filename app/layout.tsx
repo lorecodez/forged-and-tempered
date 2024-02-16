@@ -1,8 +1,24 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Newsreader } from "next/font/google";
 import "./globals.css";
+import { Suspense, lazy } from "react";
+
+const Head = lazy(() => import('@/app/components/Head').then(module => {
+    return {default: module.default}
+  })
+);
+
+const Foot = lazy(() => import('@/app/components/Foot').then(module => {
+    return {default: module.default}
+  })
+);
 
 const inter = Inter({ subsets: ["latin"] });
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  weight: ['200','300','400','500','600','700','800'],
+  style: ['normal', 'italic']
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +32,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`w-full h-full flex flex-col items-center justify-center ${inter.className} ${newsreader.className}`}>
+        <header className=" bg-transparent w-full h-fit">
+          <Suspense fallback={<p>Loading...</p>}>
+            <Head/>
+          </Suspense>
+        </header>
+        <main>
+          {children}
+        </main>
+        <footer>
+          <Suspense fallback={<p>Loading...</p>}>
+            <Foot/>
+          </Suspense>
+        </footer>
+      </body>
     </html>
   );
 }

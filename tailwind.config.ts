@@ -13,6 +13,18 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        'newsreader': ['var-(--font-newsreader)'],
+      },
+      animation: {
+        "loop-scroll": "loop-scroll 50s linear infinite"
+      },
+      keyframes: {
+        "loop-scroll": {
+          from: { transform: "translateX(0)"},
+          to: { transform: "translateX(-100%)"},
+        },
+      },
     },
   },
   plugins: [],
