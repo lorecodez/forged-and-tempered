@@ -4,7 +4,7 @@ export default function ScrollingText() {
 
   const array = new Array(4).fill('x')
   return (
-    <div className='inline-flex flex-nowrap w-screen overflow-hidden text-2xl text-white justify-between text-nowrap items-center group'>
+    <div className='inline-flex flex-nowrap w-screen overflow-hidden text-2xl text-white justify-between text-nowrap items-center group  bg-transparent'>
       <div className='flex  w-full items-center justify-between animate-loop-scroll  group-hover:animate-none'>
         {array.map((x, index) =>  
           <div key={index} className='flex items-center justify-between w-full'>

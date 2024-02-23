@@ -15,6 +15,9 @@ const config: Config = {
       },
       fontFamily: {
         'newsreader': ['var-(--font-newsreader)'],
+        'helvetica': ['Helvetica'],
+        // 'source_sans_3': ['var(--font-sourceSans3'],
+        'body': ['var(--font-newsreader)']
       },
       animation: {
         "loop-scroll": "loop-scroll 50s linear infinite"
@@ -22,11 +25,13 @@ const config: Config = {
       keyframes: {
         "loop-scroll": {
           from: { transform: "translateX(0)"},
-          to: { transform: "translateX(-100%)"},
+          to: { transform: "translateX(-50%)"},
         },
       },
     },
   },
   plugins: [],
+ 
 };
 export default config;
+
