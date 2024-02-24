@@ -27,6 +27,7 @@ export default function WinterCollection() {
             alt='Ring Model 2'
             className='object-cover w-full'
             />
+            
         </picture>
       </div>
       {/* <section className='flex items-center h-full w-fit z-20 left-96 text-4xl'>
