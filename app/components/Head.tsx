@@ -9,7 +9,7 @@ export default function Head() {
 
   return (
     <div className='font-newsreader flex items-center justify-between bg-transparent sticky z-20 w-full h-fit m-2 p-2'>
-        <menu className='flex items-center justify-center gap-4 text-xl font-sans font-thin'>
+        <menu className='flex items-center justify-center gap-4 text-xl font-sans font-light'>
             <Link href={'/'} className='group flex flex-col items-center justify-center hover:text-white'>
                 Home
                 <span className={`${pathname == '/' && 'scale-100'} group-hover:scale-100 block duration-200 group- scale-0 transiton-all ease-in-out bg-black w-full h-[2px]`}></span>
@@ -29,7 +29,7 @@ export default function Head() {
         </menu>
         <p className=' bg-transparent font-newsreader text-6xl font-thin text-white px-2 '>Forged &amp; Tempered</p>
 
-        <menu className='flex items-center justify-center gap-4 font-sans font-thin'>
+        <menu className='flex items-center justify-center gap-4 font-sans font-light'>
             <li>
                 <Link
                 href={'/'}

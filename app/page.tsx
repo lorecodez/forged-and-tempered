@@ -10,13 +10,18 @@ const WinterCollection = lazy(() => import('@/app/components/WinterCollection').
 );
 
 const Featured = lazy(() => import('@/app/components/Featured').then(module => {
-  return {default: module.default}
-})
+    return {default: module.default}
+  })
 );
 
 const ScrollingText = lazy(() => import('@/app/components/ScrollingText').then(module => {
-  return {default: module.default}
-})
+    return {default: module.default}
+  })
+);
+
+const Necklaces = lazy(() => import('@/app/components/Necklaces').then(module => {
+    return {default: module.default}
+  })
 );
 
 export default function Home() {
@@ -47,10 +52,15 @@ export default function Home() {
           </Suspense>
         </section>
       </div>
-      <div className="bg-white w-full h-full">
+      <div className="bg-white w-full h-full flex flex-col">
         <section>
           <Suspense fallback={<p>Loading...</p>}>
             <Featured/>
+          </Suspense>
+        </section>
+        <section className="w-full">
+          <Suspense fallback={<p>Loading...</p>}>
+            <Necklaces/>
           </Suspense>
         </section>
       </div>

@@ -16,7 +16,7 @@ export default function Featured() {
   const array = Array(10).fill('');
   
   return (
-    <div className='p-2 flex flex-col justify-center items-center'>
+    <div className='p-2 flex flex-col justify-center items-center mb-28'>
       <h2 className='text-7xl font-bold m-10'>Featured Products</h2>
       <Swiper
         slidesPerView={1}
